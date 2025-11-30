@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations & Effects */
+@layer base {
+  * {
+    cursor: none;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/10;
+  }
+  
+  .glow {
+    @apply shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-shadow duration-300;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+  
+  .blob-bg {
+    @apply absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-30 animate-pulse;
+  }
+}
